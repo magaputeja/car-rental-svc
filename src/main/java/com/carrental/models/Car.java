@@ -2,14 +2,17 @@ package com.carrental.models;
 
 import java.util.Objects;
 
+import com.carrental.utils.ObjectUtils;
+import com.carrental.utils.StringUtils;
+
 public class Car {
 
     private final String id;
     private final CarType type;
 
     public Car(String id, CarType type) {
-        this.id = Objects.requireNonNull(id, "id");
-        this.type = Objects.requireNonNull(type, "type");
+        this.id = StringUtils.requireNotNullOrEmpty(id, "id");
+        this.type = ObjectUtils.requireNonNull(type, "type");
     }
 
     public String getId() {

@@ -2,7 +2,8 @@ package com.carrental.models;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Objects;
+
+import com.carrental.utils.ObjectUtils;
 
 public class Reservation {
 
@@ -11,8 +12,8 @@ public class Reservation {
     private final LocalDateTime endTime;
 
     public Reservation(Car car, LocalDateTime startTime, int days) {
-        this.car = Objects.requireNonNull(car, "car");
-        this.startTime = Objects.requireNonNull(startTime, "startTime");
+        this.car = ObjectUtils.requireNonNull(car, "car");
+        this.startTime = ObjectUtils.requireNonNull(startTime, "startTime");
         if (days < 1) {
             throw new IllegalArgumentException("The minimum reservation is one (1) day");
         }
