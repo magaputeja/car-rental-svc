@@ -3,12 +3,12 @@ package com.carrental.repositories;
 import com.carrental.models.Car;
 import com.carrental.models.Reservation;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class InMemoryReservationRepository implements ReservationRepository {
 
-    private final List<Reservation> reservations = new ArrayList<>();
+    private final List<Reservation> reservations = new CopyOnWriteArrayList<>();
 
     @Override
     public void save(Reservation reservation) {
