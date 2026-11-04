@@ -1,11 +1,9 @@
 target/
-<<<<<<< HEAD
 .classpath
 .project
 .settings/
 bin/
 .DS_Store
-=======
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -22,4 +20,3 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
->>>>>>> e806f562f6958364132c282d7613a9c5438eff9c
