@@ -40,7 +40,7 @@ service.reserve(CarType.SUV, pickup.plusDays(3), 2);       // OK: back-to-back w
 | No car of the type is free for the whole period              | `CarUnavailableException`    |
 | Null type or start time, `days < 1`, start time in the past  | `InvalidReservationException`|
 
-## Behaviour
+## Behavior
 
 * **Half-open periods.** A rental occupies `[start, start + days)`. A car returned at 10:00 can be
   picked up by someone else at 10:00.
